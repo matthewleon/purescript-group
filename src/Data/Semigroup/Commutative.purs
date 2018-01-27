@@ -16,6 +16,7 @@ module Data.Semigroup.Commutative where
 
 import Data.Monoid.Additive (Additive)
 import Data.Monoid.Dual (Dual)
+import Data.Monoid.Multiplicative (Multiplicative)
 import Data.Semigroup.Commutative (class Commutative)
 import Prelude
 
@@ -32,3 +33,5 @@ instance commutativeUnit :: Commutative Unit
 instance commutativeDual :: (Commutative g) => Commutative (Dual g)
 
 instance commutativeAdditive :: (Ring r) => Commutative (Additive r)
+
+instance commutativeMultiplicative :: Semiring r => Commutative (Multiplicative r)
